@@ -633,9 +633,9 @@ var u = function() {
   var u = document.getElementById("i").value;
   var _h = sh(u.toLowerCase());
   if (h.includes(_h)) {
-    document.getElementById("s").innerText = "Yes, you will receive rewards for participating with Banano on r/place! Connect your reddit account and banano account at https://connect.cryptomonkeys.cc/"
+    document.getElementById("s").innerHTML = `Yes! Go to <a href="https://connect.cryptomonkeys.cc/">connect.cryptomonkeys.cc</a> and connect your reddit and banano account.`;
   } else {
-    document.getElementById("s").innerText = "Unfortunately you were not selected for r/place Banano rewards."
+    document.getElementById("s").innerText = "Unfortunately, you were not selected for r/place Banano rewards."
   }
 }
 var k = function(e) {
