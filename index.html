@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html>
-<header>
-</header>
-<body>
-<h1>Will I receive r/place Banano rewards?</h1>
-<label>Reddit username:</label>
-<input id="i" onkeypress="k(event)"></input>
-<button id="c">Check</button>
-<h1 id="s"></h1>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body style="background: #242422">
+<div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-md w-full space-y-8 bg-slate-100 p-4 rounded-l-md">
+    <h1 class="text-xl font-bold text-orange-500">Will I receive r/place Banano rewards?</h1>
+    <div>
+      <div class="mt-1 flex rounded-md shadow-sm">
+        <span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">u/</span>
+        <input type="text" onkeypress="k(event)" id="i" class="focus:ring-orange-500 focus:border-orange-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="username">
+        <button id="c" class="py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-orange-600 hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500">Check</button>
+      </div>
+      <h1 id="s" class="mt-1 p-1"></h1>
+    </div>
+  </div> 
+</div>
+
+
+
 <script>
 var sh = function sh(ascii) {
   function rightRotate(value, amount) {
@@ -633,7 +647,7 @@ var u = function() {
   var u = document.getElementById("i").value;
   var _h = sh(u.toLowerCase());
   if (h.includes(_h)) {
-    document.getElementById("s").innerHTML = `Yes! Go to <a href="https://connect.cryptomonkeys.cc/">connect.cryptomonkeys.cc</a> and connect your reddit and banano account.`;
+    document.getElementById("s").innerHTML = `Yes! Go to <a href="https://connect.cryptomonkeys.cc/" class="underline text-blue-600 visited:text-purple-600">connect.cryptomonkeys.cc</a> and connect your reddit, Wax and Banano account.`;
   } else {
     document.getElementById("s").innerText = "Unfortunately, you were not selected for r/place Banano rewards."
   }
